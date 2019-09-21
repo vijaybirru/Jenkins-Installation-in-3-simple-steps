@@ -1,0 +1,26 @@
+****Jenkins Installation in simple steps****
+###prerequisite for jenkins installation in linux
+##Java8 is must
+
+#check whether java is installed or not java -version ,if not install by below command
+
+1. yum -y remove java-1.7.0-openjdk -y
+   yum install java-1.8.0-openjdk-devel -y
+
+##jenkins official https://pkg.jenkins.io/redhat/ site
+
+2. wget https://pkg.jenkins.io/redhat/jenkins-2.191-1.1.noarch.rpm
+   rpm -ivh jenkins-2.191-1.1.noarch.rpm
+
+#default jenkins location is /var/lib/jenkins
+see beforeinstalling jenkins, there is no jenkins folder before installing jenkins
+3.service jenkins start
+  service jenkins status
+
+  Default port of jenkins is 8080
+  so localhost:8080 or serverip:8080
+
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+copy the above key and paste in Administrator password
+--------------------------------------------------------
